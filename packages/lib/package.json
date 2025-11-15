@@ -2,7 +2,7 @@
   "name": "@ours/lib",
   "version": "1.0.0",
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./src/index.js",
   "dependencies": {
     "zod": "^4.1.12"
   }

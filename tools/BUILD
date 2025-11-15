@@ -36,6 +36,7 @@ bazel_env(
     tools = {
         # Mapping from tool binary name ($PATH entry) to Bazel label
         "buildifier": "@buildifier_prebuilt//:buildifier",
+        "prettier": "//tools/format:prettier",
         "format": "//tools/format:format",
         "node": "$(NODE_PATH)",
         "pnpm": "@pnpm",

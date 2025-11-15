@@ -5,6 +5,7 @@
   "files.watcherExclude": {
     "bazel-*/**": true
   },
+  "prettier.prettierPath": "./bazel-out/bazel_env-opt/bin/tools/bazel_env/bin/prettier",
   "C_Cpp.workspaceParsingPriority": "medium",
   "bazel.buildifierFixOnFormat": true,
   "bazel.enableCodeLens": true,

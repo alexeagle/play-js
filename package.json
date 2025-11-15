@@ -9,7 +9,25 @@
     "typescript-eslint": "^8"
   },
   "pnpm": {
-    "onlyBuiltDependencies": []
+    "onlyBuiltDependencies": [],
+    "packageExtensions": {
+      "lit": {
+        "peerDependencies": {
+          "lit-element": "*",
+          "lit-html": "*",
+          "@lit/reactive-element": "*"
+        }
+      },
+      "vite": {
+        "peerDependencies": {
+          "rollup": "*",
+          "esbuild": "*",
+          "picomatch": "*",
+          "fdir": "*",
+          "tinyglobby": "*"
+        }
+      }
+    }
   },
   "type": "module"
 }

@@ -6,7 +6,11 @@ npm_link_all_packages(name = "node_modules")
 
 js_run_devserver(
     name = "dev",
-    data = ["app"],
+    chdir = package_name(),
+    data = [
+        "app",
+        "vite.config.js",
+    ],
     tool = "vite",
 )
 
@@ -16,6 +20,7 @@ js_library(
     name = "app",
     srcs = [
         "index.html",
+        "package.json",
         "//packages/web/src",
     ],
 )

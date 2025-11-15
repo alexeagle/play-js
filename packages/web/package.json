@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bazel run //packages/web:dev"
+    "dev": "ibazel run //packages/web:dev"
   },
   "keywords": [],
   "author": "",
