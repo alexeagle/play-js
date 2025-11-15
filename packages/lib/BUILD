@@ -1,10 +1,13 @@
-load("@aspect_rules_js//npm:defs.bzl", "npm_package")
+load("@aspect_rules_js//js:defs.bzl", "js_library")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 
 npm_link_all_packages(name = "node_modules")
 
-npm_package(
+js_library(
     name = "pkg",
-    srcs = ["package.json"],
+    srcs = [
+        "package.json",
+        "//packages/lib/src",
+    ],
     visibility = ["//:__pkg__"],
 )

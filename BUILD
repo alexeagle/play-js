@@ -1,3 +1,5 @@
+load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
+
 """Targets in the repository root"""
 
 load("@aspect_rules_js//js:defs.bzl", "js_library")
@@ -33,6 +35,7 @@ exports_files(
 
 # We prefer BUILD instead of BUILD.bazel
 # gazelle:build_file_name BUILD
+# gazelle:js_package_rule_kind js_library
 # gazelle:exclude githooks/*
 gazelle(
     name = "gazelle",
@@ -44,4 +47,10 @@ gazelle(
         ]),
     },
     gazelle = "@multitool//tools/gazelle",
+)
+
+ts_config(
+    name = "tsconfig",
+    src = "tsconfig.json",
+    visibility = [":__subpackages__"],
 )
