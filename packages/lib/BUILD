@@ -7,7 +7,9 @@ js_library(
     name = "pkg",
     srcs = [
         "package.json",
-        "//packages/lib/src",
     ],
     visibility = ["//:__pkg__"],
+    deps = [
+        "//packages/lib/src",
+    ],
 )
